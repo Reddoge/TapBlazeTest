@@ -14,23 +14,11 @@ bool BonusWheel::init()
         return false;
     }
 
-    auto visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    _visibleSize = Director::getInstance()->getVisibleSize();
+    _origin = Director::getInstance()->getVisibleOrigin();
 
-
-    auto playOnButton = MenuItemImage::create(
-        "spin_button.png",
-        "spin_button.png",
-        CC_CALLBACK_1(BonusWheel::playOnSpinCallback, this));
-
-    float x = origin.x + (visibleSize.width / 2);
-    float y = origin.y + (visibleSize.height / 6);
-    playOnButton->setPosition(Vec2(x, y));
-
-    auto menu = Menu::create(playOnButton, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
+    setupWheel();
+    setupWheelSpinButton();
 
 
     auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
@@ -40,7 +28,44 @@ bool BonusWheel::init()
     return true;
 }
 
-void BonusWheel::playOnSpinCallback(cocos2d::Ref* sender)
+void BonusWheel::setupWheel()
+{
+    //Setup Wheel position
+    float wheelX = _origin.x + (_visibleSize.width / 2);
+    float wheelY = _origin.y + (_visibleSize.height / 2) + 70.0f;
+
+    auto wheelSprite = Sprite::create("wheel_sections_8.png");
+    wheelSprite->setPosition(Vec2(wheelX, wheelY));
+
+    auto wheelBorderSprite = Sprite::create("wheel_border.png");
+    wheelBorderSprite->setAnchorPoint(Vec2(0.0, 0.0));
+
+    //auto greenArrow = Sprite::create("wheel_arrow.png");
+    //greenArrow->setAnchorPoint(Vec2(0.5f, 0.5f));
+    //greenArrow->setPosition(Vec2(0.0f, wheelY));
+
+    this->addChild(wheelSprite, 0);
+    wheelSprite->addChild(wheelBorderSprite, 1);
+    //wheelBorderSprite->addChild(greenArrow, 0);
+}
+
+void BonusWheel::setupWheelSpinButton()
+{
+    //Setup Button position
+    float buttonX = _origin.x + (_visibleSize.width / 2);
+    float buttonY = _origin.y + (_visibleSize.height / 8);
+
+    auto label = Label::createWithTTF("PlayOn", "fonts/Marker Felt.ttf", 68);
+
+    auto button = ui::Button::create("spin_button.png", "", "");
+    button->setTitleLabel(label);
+    button->setPosition(Vec2(buttonX, buttonY));
+    button->setScale(0.8f);
+    button->addTouchEventListener(CC_CALLBACK_1(BonusWheel::playWheelSpinButtonCallback, this));
+    this->addChild(button);
+}
+
+void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender)
 {
     CCLOG("Callback works");
 }
