@@ -11,6 +11,9 @@ class BonusWheel : public cocos2d::Scene
     cocos2d::Size _visibleSize;
     cocos2d::Vec2 _origin;
 
+    cocos2d::Sprite* _wheelSprite;
+    const int _wheelSectorCount = 8;
+
 public:
     static cocos2d::Scene* createScene();
 
@@ -24,6 +27,8 @@ public:
 private:
 
     void setupWheel();
+
+    void populateWheel();
 
     void setupWheelSpinButton();
 };

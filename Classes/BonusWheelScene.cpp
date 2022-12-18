@@ -18,12 +18,8 @@ bool BonusWheel::init()
     _origin = Director::getInstance()->getVisibleOrigin();
 
     setupWheel();
+    populateWheel();
     setupWheelSpinButton();
-
-
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-    label->setAnchorPoint(cocos2d::Vec2(0.0f, 0.0f));
-    this->addChild(label, 1);
 
     return true;
 }
@@ -32,21 +28,38 @@ void BonusWheel::setupWheel()
 {
     //Setup Wheel position
     float wheelX = _origin.x + (_visibleSize.width / 2);
-    float wheelY = _origin.y + (_visibleSize.height / 2) + 70.0f;
+    float wheelY = _origin.y + (_visibleSize.height / 2) + 60.0f;
 
-    auto wheelSprite = Sprite::create("wheel_sections_8.png");
-    wheelSprite->setPosition(Vec2(wheelX, wheelY));
+    _wheelSprite = Sprite::create("wheel_sections_8.png");
+    _wheelSprite->setPosition(Vec2(wheelX, wheelY));
 
     auto wheelBorderSprite = Sprite::create("wheel_border.png");
-    wheelBorderSprite->setAnchorPoint(Vec2(0.0, 0.0));
+    wheelBorderSprite->setPosition(Vec2(wheelX, wheelY));
 
-    //auto greenArrow = Sprite::create("wheel_arrow.png");
-    //greenArrow->setAnchorPoint(Vec2(0.5f, 0.5f));
-    //greenArrow->setPosition(Vec2(0.0f, wheelY));
+    //Note that the X position of the arrow is referring to wheelX
+    float arrowY = wheelY + (wheelBorderSprite->getContentSize().height / 2) - 30.0f;
 
-    this->addChild(wheelSprite, 0);
-    wheelSprite->addChild(wheelBorderSprite, 1);
-    //wheelBorderSprite->addChild(greenArrow, 0);
+    auto greenArrow = Sprite::create("wheel_arrow.png");
+    greenArrow->setPosition(Vec2(wheelX, arrowY));
+
+    //Didn't parent wheel border due to a wobble that would occur, its not sitting correctly on the sprite
+    this->addChild(_wheelSprite, 0);
+    this->addChild(wheelBorderSprite, 1);
+    this->addChild(greenArrow, 2);
+}
+
+void BonusWheel::populateWheel()
+{
+    float wheelX = _origin.x + (_visibleSize.width / 2);
+    float wheelY = _origin.y + (_visibleSize.height / 2) + 60.0f;
+
+    float anglePerSector = 360 / _wheelSectorCount;
+
+    auto life = Sprite::create("heart.png");
+    life->setAnchorPoint(Vec2(1.0, 1.0));
+    life->setPosition(Vec2(wheelX, wheelY));
+
+    _wheelSprite->addChild(life, 5);
 }
 
 void BonusWheel::setupWheelSpinButton()
@@ -67,5 +80,20 @@ void BonusWheel::setupWheelSpinButton()
 
 void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender)
 {
+    cocos2d::Vector<cocos2d::FiniteTimeAction*> actionVector;
+    actionVector.pushBack(RotateBy::create(0.5f, -5));
+    actionVector.pushBack(RotateBy::create(1.0f, 500));
+    
+
+    auto callback = CallFuncN::create([&](Node* node) {
+        CCLOG("Callback works 2");
+        });
+
+    actionVector.pushBack(callback);
+    
+    auto sequence = Sequence::create(actionVector);
+
+    _wheelSprite->runAction(sequence);
+
     CCLOG("Callback works");
 }
