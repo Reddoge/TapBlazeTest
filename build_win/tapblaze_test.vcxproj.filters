@@ -7,6 +7,9 @@
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\CodingTests\tapblaze_test\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
@@ -21,6 +24,9 @@
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\main.h">
       <Filter>Source Files\proj.win32</Filter>
     </ClInclude>
@@ -32,6 +38,33 @@
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CloseSelected.png">
       <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\brush.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\coin.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\gem.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\hammer.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\heart.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\spin_button.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\wheel_arrow.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\wheel_border.png">
+      <Filter>Resources\CodeTest</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CodeTest\wheel_sections_8.png">
+      <Filter>Resources\CodeTest</Filter>
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\HelloWorld.png">
       <Filter>Resources</Filter>
@@ -57,6 +90,9 @@
   <ItemGroup>
     <Filter Include="Resources">
       <UniqueIdentifier>{20484EF9-B933-3CAB-8C21-6B2A0434D67B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\CodeTest">
+      <UniqueIdentifier>{975034C2-CB96-32CB-BB2C-F2154923D554}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\fonts">
       <UniqueIdentifier>{C8554274-2672-3476-8F16-7C373663F133}</UniqueIdentifier>
