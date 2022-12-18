@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A96BE97A-A57D-3D0C-83EA-974B8D5B18FB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\CodingTests\tapblaze_test\cocos2d\cocos\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/cocos2d/cocos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/engine/cocos/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CodingTests\tapblaze_test\cocos2d\cocos\2d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\base\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support\cocostudio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\math\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\navmesh\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\network\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\renderer\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\ui\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\extensions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/cocos2d/cocos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/engine/cocos/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CodingTests\tapblaze_test\cocos2d\cocos\2d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\base\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support\cocostudio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\math\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\navmesh\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\network\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\renderer\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\ui\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\extensions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/cocos2d/cocos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/engine/cocos/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CodingTests\tapblaze_test\cocos2d\cocos\2d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\base\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support\cocostudio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\math\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\navmesh\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\network\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\renderer\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\ui\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\extensions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/cocos2d/cocos/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/engine/cocos/core/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CodingTests\tapblaze_test\cocos2d\cocos\2d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\base\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support\cocostudio\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\math\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\navmesh\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\network\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\physics3d\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\renderer\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\cocos\ui\CMakeLists.txt;D:\CodingTests\tapblaze_test\cocos2d\extensions\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\ZERO_CHECK.vcxproj">
+      <Project>{34177B3E-28FA-3D77-9D2E-376944FC8DA5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{DF7A137A-80BA-32E1-8E21-91A7A083F338}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{7872CEEA-CC7D-30F8-94B6-2427F53B82A1}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{5FDC233A-9182-354B-B582-9190CA3A6B78}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{90365EF4-981E-3E0B-9ED4-B49BB1D80431}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\md5\ext_md5.vcxproj">
+      <Project>{800D83FD-73B4-3654-B960-8CCD91E17573}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{BC976E16-6E5C-3D9E-9D3D-BB3EB8BBD81E}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\recast\ext_recast.vcxproj">
+      <Project>{838BDAB7-158A-33F7-9EEB-E2AC8F91DAC0}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{8F6EB7BF-97AD-351D-802F-0EF59EBFA920}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{DD7E22A5-FEA8-3BE4-B26B-2DE6F91B8CAE}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{7EC7D087-E86B-375E-AC56-BCEBB7CDD758}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{DCB76728-C637-3D0E-BDBB-B400C53ACB61}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\external.vcxproj">
+      <Project>{0310F46B-FB5C-328A-B5AA-9C80472EA625}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

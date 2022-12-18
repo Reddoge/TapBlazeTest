@@ -1,0 +1,889 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B4D88D76-6B90-39C5-BA5B-4FFA9A767FD8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>tapblaze_test</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CodingTests\tapblaze_test\build_win\bin\tapblaze_test\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tapblaze_test.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">tapblaze_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CodingTests\tapblaze_test\build_win\bin\tapblaze_test\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tapblaze_test.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">tapblaze_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CodingTests\tapblaze_test\build_win\bin\tapblaze_test\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tapblaze_test.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">tapblaze_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CodingTests\tapblaze_test\build_win\bin\tapblaze_test\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tapblaze_test.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">tapblaze_test</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/Box2D/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/chipmunk/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include/bullet" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/jpeg/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/openssl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/uv/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/webp/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/websockets/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/curl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/png/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/glfw3/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;COCOS2D_DEBUG=1;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/uv/prebuilt/win32/uv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Debug\cocos2d.lib;lib\Debug\external.lib;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\prebuilt\win32\debug\libbox2d.lib;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\prebuilt\win32\debug-lib\libchipmunk.lib;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Debug\ext_recast.lib;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\prebuilt\win32\debug\libbullet.lib;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;D:\CodingTests\tapblaze_test\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Debug\ext_tinyxml2.lib;lib\Debug\ext_xxhash.lib;lib\Debug\ext_xxtea.lib;lib\Debug\ext_clipper.lib;lib\Debug\ext_edtaa3func.lib;lib\Debug\ext_convertUTF.lib;lib\Debug\ext_poly2tri.lib;lib\Debug\ext_md5.lib;D:\CodingTests\tapblaze_test\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Debug\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/CodingTests/tapblaze_test/build_win/Debug/tapblaze_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/tapblaze_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/Box2D/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/chipmunk/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include/bullet" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/jpeg/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/openssl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/uv/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/webp/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/websockets/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/curl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/png/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/glfw3/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/uv/prebuilt/win32/uv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\Release\cocos2d.lib;lib\Release\external.lib;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\Release\ext_recast.lib;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;D:\CodingTests\tapblaze_test\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\Release\ext_tinyxml2.lib;lib\Release\ext_xxhash.lib;lib\Release\ext_xxtea.lib;lib\Release\ext_clipper.lib;lib\Release\ext_edtaa3func.lib;lib\Release\ext_convertUTF.lib;lib\Release\ext_poly2tri.lib;lib\Release\ext_md5.lib;D:\CodingTests\tapblaze_test\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\Release\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/CodingTests/tapblaze_test/build_win/Release/tapblaze_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/tapblaze_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/Box2D/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/chipmunk/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include/bullet" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/jpeg/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/openssl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/uv/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/webp/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/websockets/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/curl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/png/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/glfw3/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/uv/prebuilt/win32/uv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\MinSizeRel\cocos2d.lib;lib\MinSizeRel\external.lib;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\MinSizeRel\ext_recast.lib;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;D:\CodingTests\tapblaze_test\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\MinSizeRel\ext_tinyxml2.lib;lib\MinSizeRel\ext_xxhash.lib;lib\MinSizeRel\ext_xxtea.lib;lib\MinSizeRel\ext_clipper.lib;lib\MinSizeRel\ext_edtaa3func.lib;lib\MinSizeRel\ext_convertUTF.lib;lib\MinSizeRel\ext_poly2tri.lib;lib\MinSizeRel\ext_md5.lib;D:\CodingTests\tapblaze_test\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\MinSizeRel\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/CodingTests/tapblaze_test/build_win/MinSizeRel/tapblaze_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/tapblaze_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/Box2D/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/chipmunk/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/freetype2/include/win32/freetype2" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/bullet/include/bullet" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/jpeg/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/openssl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/uv/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/webp/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/websockets/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/curl/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/png/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/include/OGLES" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/include" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/glfw3/include/win32" /external:I "D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_WIN32;UNICODE;_UNICODE;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;CC_STATIC;LWS_WITH_LIBUV;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\CodingTests\tapblaze_test\Classes;D:\CodingTests\tapblaze_test\cocos2d\cocos\audio\include;D:\CodingTests\tapblaze_test\cocos2d;D:\CodingTests\tapblaze_test\cocos2d\cocos;D:\CodingTests\tapblaze_test\cocos2d\extensions;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform;D:\CodingTests\tapblaze_test\cocos2d\cocos\editor-support;D:\CodingTests\tapblaze_test\cocos2d\cocos\base;D:\CodingTests\tapblaze_test\cocos2d\cocos\platform\win32;D:\CodingTests\tapblaze_test\cocos2d\external\recast\..;D:\CodingTests\tapblaze_test\cocos2d\external\tinyxml2\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxhash\.;D:\CodingTests\tapblaze_test\cocos2d\external\xxtea\.;D:\CodingTests\tapblaze_test\cocos2d\external\clipper\.;D:\CodingTests\tapblaze_test\cocos2d\external\edtaa3func\.;D:\CodingTests\tapblaze_test\cocos2d\external\ConvertUTF\.;D:\CodingTests\tapblaze_test\cocos2d\external\poly2tri\..;D:\CodingTests\tapblaze_test\cocos2d\external\md5\..;D:\CodingTests\tapblaze_test\cocos2d\external\unzip\.;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\include;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\include;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\include\win32\freetype2;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\include\bullet;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\uv\include;D:\CodingTests\tapblaze_test\cocos2d\external\webp\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\curl\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\png\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\include\OGLES;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\include;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\include;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\include\win32;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message>												</Message>
+      <Command>setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libssl-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libcrypto-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libcrypto-1_1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/uv/prebuilt/win32/uv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/uv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/websockets/prebuilt/win32/websockets.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/websockets.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/curl/prebuilt/win32/libcurl.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libcurl.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/gles/prebuilt/glew32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/glew32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/icon/prebuilt/iconv.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/iconv.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/MP3Decoder/prebuilt/libmpg123.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libmpg123.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libogg.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libogg.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbis.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libvorbis.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OggDecoder/prebuilt/libvorbisfile.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libvorbisfile.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/win32-specific/OpenalSoft/prebuilt/OpenAL32.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/OpenAL32.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/zlib/../win32-specific/zlib/prebuilt/zlib1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/zlib1.dll
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>lib\RelWithDebInfo\cocos2d.lib;lib\RelWithDebInfo\external.lib;D:\CodingTests\tapblaze_test\cocos2d\external\Box2D\prebuilt\win32\release\libbox2d.lib;D:\CodingTests\tapblaze_test\cocos2d\external\chipmunk\prebuilt\win32\release-lib\libchipmunk.lib;D:\CodingTests\tapblaze_test\cocos2d\external\freetype2\prebuilt\win32\freetype.lib;lib\RelWithDebInfo\ext_recast.lib;D:\CodingTests\tapblaze_test\cocos2d\external\bullet\prebuilt\win32\release\libbullet.lib;D:\CodingTests\tapblaze_test\cocos2d\external\jpeg\prebuilt\win32\libjpeg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\webp\prebuilt\win32\libwebp.lib;D:\CodingTests\tapblaze_test\cocos2d\external\websockets\prebuilt\win32\websockets.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libssl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\openssl\prebuilt\win32\libcrypto.lib;D:\CodingTests\tapblaze_test\cocos2d\external\uv\prebuilt\win32\uv_a.lib;lib\RelWithDebInfo\ext_tinyxml2.lib;lib\RelWithDebInfo\ext_xxhash.lib;lib\RelWithDebInfo\ext_xxtea.lib;lib\RelWithDebInfo\ext_clipper.lib;lib\RelWithDebInfo\ext_edtaa3func.lib;lib\RelWithDebInfo\ext_convertUTF.lib;lib\RelWithDebInfo\ext_poly2tri.lib;lib\RelWithDebInfo\ext_md5.lib;D:\CodingTests\tapblaze_test\cocos2d\external\curl\prebuilt\win32\libcurl.lib;D:\CodingTests\tapblaze_test\cocos2d\external\png\prebuilt\win32\libpng.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\gles\prebuilt\glew32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\icon\prebuilt\libiconv.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\MP3Decoder\prebuilt\libmpg123.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libogg.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbis.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OggDecoder\prebuilt\libvorbisfile.lib;D:\CodingTests\tapblaze_test\cocos2d\external\win32-specific\OpenalSoft\prebuilt\OpenAL32.lib;D:\CodingTests\tapblaze_test\cocos2d\external\glfw3\prebuilt\win32\glfw3.lib;D:\CodingTests\tapblaze_test\cocos2d\external\zlib\..\win32-specific\zlib\prebuilt\libzlib.lib;lib\RelWithDebInfo\ext_unzip.lib;ws2_32.lib;userenv.lib;psapi.lib;winmm.lib;Version.lib;Iphlpapi.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/CodingTests/tapblaze_test/build_win/RelWithDebInfo/tapblaze_test.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/tapblaze_test.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\CodingTests\tapblaze_test\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeSystem.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeSystem.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeSystem.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/CodingTests/tapblaze_test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/CodingTests/tapblaze_test -BD:/CodingTests/tapblaze_test/build_win --check-stamp-file D:/CodingTests/tapblaze_test/build_win/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;D:\CodingTests\tapblaze_test\build_win\CMakeFiles\3.25.1\CMakeSystem.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosBuildSet.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDefine.cmake;D:\CodingTests\tapblaze_test\cocos2d\cmake\Modules\CocosConfigDepend.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;D:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;D:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\CodingTests\tapblaze_test\build_win\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.h" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.h" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\main.h" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\resource.h" />
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.cpp" />
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="D:\CodingTests\tapblaze_test\proj.win32\main.cpp" />
+    <ResourceCompile Include="D:\CodingTests\tapblaze_test\proj.win32\game.rc" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CloseNormal.png" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CloseSelected.png" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\HelloWorld.png" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\fonts\Marker Felt.ttf" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\fonts\arial.ttf" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\res\.gitkeep" />
+    <ClCompile Include="D:\CodingTests\tapblaze_test\cocos2d\cocos\precheader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\ZERO_CHECK.vcxproj">
+      <Project>{34177B3E-28FA-3D77-9D2E-376944FC8DA5}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\SYNC_RESOURCE-tapblaze_test.vcxproj">
+      <Project>{EACDF6C2-3C28-35C1-8D99-15ABCD556CC7}</Project>
+      <Name>SYNC_RESOURCE-tapblaze_test</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\cocos\core\cocos2d.vcxproj">
+      <Project>{DF7A137A-80BA-32E1-8E21-91A7A083F338}</Project>
+      <Name>cocos2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\clipper\ext_clipper.vcxproj">
+      <Project>{7872CEEA-CC7D-30F8-94B6-2427F53B82A1}</Project>
+      <Name>ext_clipper</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\ConvertUTF\ext_convertUTF.vcxproj">
+      <Project>{5FDC233A-9182-354B-B582-9190CA3A6B78}</Project>
+      <Name>ext_convertUTF</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\edtaa3func\ext_edtaa3func.vcxproj">
+      <Project>{90365EF4-981E-3E0B-9ED4-B49BB1D80431}</Project>
+      <Name>ext_edtaa3func</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\md5\ext_md5.vcxproj">
+      <Project>{800D83FD-73B4-3654-B960-8CCD91E17573}</Project>
+      <Name>ext_md5</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\poly2tri\ext_poly2tri.vcxproj">
+      <Project>{BC976E16-6E5C-3D9E-9D3D-BB3EB8BBD81E}</Project>
+      <Name>ext_poly2tri</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\recast\ext_recast.vcxproj">
+      <Project>{838BDAB7-158A-33F7-9EEB-E2AC8F91DAC0}</Project>
+      <Name>ext_recast</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\tinyxml2\ext_tinyxml2.vcxproj">
+      <Project>{8F6EB7BF-97AD-351D-802F-0EF59EBFA920}</Project>
+      <Name>ext_tinyxml2</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\unzip\ext_unzip.vcxproj">
+      <Project>{DD7E22A5-FEA8-3BE4-B26B-2DE6F91B8CAE}</Project>
+      <Name>ext_unzip</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\xxhash\ext_xxhash.vcxproj">
+      <Project>{7EC7D087-E86B-375E-AC56-BCEBB7CDD758}</Project>
+      <Name>ext_xxhash</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\xxtea\ext_xxtea.vcxproj">
+      <Project>{DCB76728-C637-3D0E-BDBB-B400C53ACB61}</Project>
+      <Name>ext_xxtea</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\CodingTests\tapblaze_test\build_win\engine\external\external.vcxproj">
+      <Project>{0310F46B-FB5C-328A-B5AA-9C80472EA625}</Project>
+      <Name>external</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
