@@ -1,4 +1,5 @@
 #include "BonusWheelScene.h"
+#include <cmath>
 
 USING_NS_CC;
 
@@ -50,16 +51,27 @@ void BonusWheel::setupWheel()
 
 void BonusWheel::populateWheel()
 {
-    float wheelX = _origin.x + (_visibleSize.width / 2);
-    float wheelY = _origin.y + (_visibleSize.height / 2) + 60.0f;
+    Vec2 wheelCenter = Vec2(_wheelSprite->getContentSize().width * 0.5f, _wheelSprite->getContentSize().height * 0.5f);
 
-    float anglePerSector = 360 / _wheelSectorCount;
+    float anglePerSector = (M_PI * 2.0f) / _wheelSectorCount;
+    
+    for (size_t i = 0; i < _wheelSectorCount; i++)
+    {
+        //Divide total distance around the outside of the circle byy the amount of sectors we need
+        float angle = i * anglePerSector;
+        Vec2 newPos = Vec2(cos(angle) * _symbolRadius, sin(angle) * _symbolRadius);
+        newPos += wheelCenter;
 
-    auto life = Sprite::create("heart.png");
-    life->setAnchorPoint(Vec2(1.0, 1.0));
-    life->setPosition(Vec2(wheelX, wheelY));
+        auto life = Sprite::create("heart.png");
+        life->setPosition(newPos);
 
-    _wheelSprite->addChild(life, 5);
+        _wheelSprite->addChild(life, 5);
+    }
+
+    /*auto life = Sprite::create("heart.png");
+    life->setPosition(symbolPosition);
+
+    _wheelSprite->addChild(life, 5);*/
 }
 
 void BonusWheel::setupWheelSpinButton()
