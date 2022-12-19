@@ -67,11 +67,17 @@ void BonusWheel::populateWheel()
         //Offset symbol by the center of the wheel
         symbolPosition += wheelCenter;
 
-        Sprite* symbol = Sprite::create("heart.png");
+        auto symbol = Sprite::create("heart.png");
         symbol->setPosition(symbolPosition);
         symbol->setRotation((i + 0.5) * 45);
+
+        auto symbolLabel = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 20);
+        symbolLabel->enableOutline(Color4B(188, 74, 60, 255), 2);
+        symbolLabel->setAnchorPoint(Vec2(0.0f, 0.0f));
+        symbolLabel->setPosition(Vec2(0.0f, -10.0f));
         
         _wheelSprite->addChild(symbol, 5);
+        symbol->addChild(symbolLabel, 6);
     }
 }
 
