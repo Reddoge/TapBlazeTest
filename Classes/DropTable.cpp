@@ -11,9 +11,9 @@ DropTable::DropTable()
 	dropTable.push_back(new DropTableItem(3, "Gems", 35, 10, "gem.png"));
 	dropTable.push_back(new DropTableItem(4, "Hammer", 3, 10, "hammer.png"));
 	dropTable.push_back(new DropTableItem(5, "Coins", 750, 5, "coin.png"));
-	dropTable.push_back(new DropTableItem(6, "Brush", 7, 20, "brush.png"));
+	dropTable.push_back(new DropTableItem(6, "Brush", 1, 20, "brush.png"));
 	dropTable.push_back(new DropTableItem(7, "Gems", 75, 5, "gem.png"));
-	dropTable.push_back(new DropTableItem(8, "Hammer", 7, 20, "hammer.png"));
+	dropTable.push_back(new DropTableItem(8, "Hammer", 1, 20, "hammer.png"));
 }
 
 void DropTable::OverrideTable()

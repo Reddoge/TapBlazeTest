@@ -7,7 +7,7 @@ DropTableItem::DropTableItem(int sector, std::string name, int quantity, int dro
 	_quantity = quantity;
 	_dropWeight = dropWeight;
 	_imageFileName = imageFileName;
-	_displayText = "x " + name;
+	_displayText = "x " + std::to_string(quantity);
 }
 
 DropTableItem::DropTableItem(int sector, std::string name, int quantity, int dropWeight, std::string imageFileName, std::string displayTextOverride)

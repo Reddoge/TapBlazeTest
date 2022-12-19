@@ -98,19 +98,38 @@ void BonusWheel::setupWheelSpinButton()
     button->setTitleLabel(label);
     button->setPosition(Vec2(buttonX, buttonY));
     button->setScale(0.8f);
-    button->addTouchEventListener(CC_CALLBACK_1(BonusWheel::playWheelSpinButtonCallback, this));
+    button->addTouchEventListener(CC_CALLBACK_2(BonusWheel::playWheelSpinButtonCallback, this));
     this->addChild(button);
 }
 
-void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender)
+void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
 {
+    if (type != cocos2d::ui::Widget::TouchEventType::ENDED)
+        return;
+
     DropTableItem* winningItem = _dropTable.RollTable();
+
+    if (!winningItem)
+    {
+        CCLOG("Not going to spin, item was nullptr");
+        return;
+    }
+
     int sectorNumber = winningItem->GetSector();
+
+    CCLOG("%d", sectorNumber);
+    CCLOG("%s", &winningItem->GetName());
+    CCLOG("%d", winningItem->GetQuantity());
+
+    //Calculate desired offset
+    int desiredItemAngleOffset = 720 - ((sectorNumber * 45) - 22.5f);
+
+    CCLOG("%d", desiredItemAngleOffset);
 
     cocos2d::Vector<cocos2d::FiniteTimeAction*> actionVector;
     actionVector.pushBack(RotateBy::create(0.5f, -5));
-    actionVector.pushBack(EaseInOut::create(RotateBy::create(2.0f, 1000), 0.5f));
-    
+    actionVector.pushBack(EaseOut::create(RotateBy::create(4.0f, 1805), 0.5f));
+    actionVector.pushBack(EaseIn::create(RotateBy::create(2.0f, desiredItemAngleOffset), 0.5f));
 
     auto callback = CallFuncN::create([&](Node* node) {
         CCLOG("Callback works 2");
@@ -121,6 +140,4 @@ void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender)
     auto sequence = Sequence::create(actionVector);
 
     _wheelSprite->runAction(sequence);
-
-    CCLOG("Callback works");
 }

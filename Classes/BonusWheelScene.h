@@ -22,7 +22,7 @@ public:
 
     virtual bool init();
 
-    void playWheelSpinButtonCallback(cocos2d::Ref* sender);
+    void playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType test);
 
     // implement the "static create()" method manually
     CREATE_FUNC(BonusWheel);
