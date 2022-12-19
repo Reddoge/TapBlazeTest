@@ -53,11 +53,16 @@ void BonusWheel::populateWheel()
 {
     Vec2 wheelCenter = Vec2(_wheelSprite->getContentSize().width * 0.5f, _wheelSprite->getContentSize().height * 0.5f);
 
-    //Divide total distance around the outside of the circle by the amount of sectors we need
-    float anglePerSector = (M_PI * 2.0f) / _wheelSectorCount;
+    std::vector<DropTableItem*> dropTableItems = _dropTable.GetDropTableItems();
+    int wheelSectorCount = dropTableItems.size();
 
-    for (size_t i = 0; i < _wheelSectorCount; i++)
+    //Divide total distance around the outside of the circle by the amount of sectors we need
+    float anglePerSector = (M_PI * 2.0f) / wheelSectorCount;
+
+    for (size_t i = 0; i < wheelSectorCount; i++)
     {
+        DropTableItem* dropTableItem = dropTableItems[i];
+
         //Offset rotation of placing the symbols on the wheel
         float angle = (i + 0.5) * anglePerSector;
 
@@ -67,11 +72,11 @@ void BonusWheel::populateWheel()
         //Offset symbol by the center of the wheel
         symbolPosition += wheelCenter;
 
-        auto symbol = Sprite::create("heart.png");
+        auto symbol = Sprite::create(dropTableItem->GetFileName());
         symbol->setPosition(symbolPosition);
-        symbol->setRotation((i + 0.5) * 45);
+        symbol->setRotation((i + 0.5) * (360 / wheelSectorCount));
 
-        auto symbolLabel = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 20);
+        auto symbolLabel = Label::createWithTTF(dropTableItem->GetDisplayText(), "fonts/Marker Felt.ttf", 20);
         symbolLabel->enableOutline(Color4B(188, 74, 60, 255), 2);
         symbolLabel->setAnchorPoint(Vec2(0.0f, 0.0f));
         symbolLabel->setPosition(Vec2(0.0f, -10.0f));
@@ -99,9 +104,12 @@ void BonusWheel::setupWheelSpinButton()
 
 void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender)
 {
+    DropTableItem* winningItem = _dropTable.RollTable();
+    int sectorNumber = winningItem->GetSector();
+
     cocos2d::Vector<cocos2d::FiniteTimeAction*> actionVector;
     actionVector.pushBack(RotateBy::create(0.5f, -5));
-    actionVector.pushBack(RotateBy::create(1.0f, 500));
+    actionVector.pushBack(EaseInOut::create(RotateBy::create(2.0f, 1000), 0.5f));
     
 
     auto callback = CallFuncN::create([&](Node* node) {

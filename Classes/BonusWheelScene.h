@@ -5,6 +5,7 @@
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
+#include "DropTable.h"
 
 class BonusWheel : public cocos2d::Scene
 {
@@ -12,8 +13,9 @@ class BonusWheel : public cocos2d::Scene
     cocos2d::Vec2 _origin;
 
     cocos2d::Sprite* _wheelSprite;
-    const int _wheelSectorCount = 8;
     const float _symbolRadius = 215.0f;
+
+    DropTable _dropTable;
 
 public:
     static cocos2d::Scene* createScene();

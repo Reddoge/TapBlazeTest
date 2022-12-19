@@ -1,13 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\DropTableItem.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
-    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.cpp">
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\DropTable.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="D:\CodingTests\tapblaze_test\proj.win32\main.cpp">
@@ -21,10 +24,10 @@
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\HelloWorldScene.h">
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.h">
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\DropTable.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\main.h">
@@ -77,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\test.txt">
+      <Filter>Resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
