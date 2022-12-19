@@ -13,7 +13,7 @@ class BonusWheel : public cocos2d::Scene
 
     cocos2d::Sprite* _wheelSprite;
     const int _wheelSectorCount = 8;
-    const float _symbolRadius = 200.0f;
+    const float _symbolRadius = 215.0f;
 
 public:
     static cocos2d::Scene* createScene();

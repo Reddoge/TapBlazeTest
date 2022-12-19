@@ -53,25 +53,26 @@ void BonusWheel::populateWheel()
 {
     Vec2 wheelCenter = Vec2(_wheelSprite->getContentSize().width * 0.5f, _wheelSprite->getContentSize().height * 0.5f);
 
+    //Divide total distance around the outside of the circle by the amount of sectors we need
     float anglePerSector = (M_PI * 2.0f) / _wheelSectorCount;
-    
+
     for (size_t i = 0; i < _wheelSectorCount; i++)
     {
-        //Divide total distance around the outside of the circle byy the amount of sectors we need
-        float angle = i * anglePerSector;
-        Vec2 newPos = Vec2(cos(angle) * _symbolRadius, sin(angle) * _symbolRadius);
-        newPos += wheelCenter;
+        //Offset rotation of placing the symbols on the wheel
+        float angle = (i + 0.5) * anglePerSector;
 
-        auto life = Sprite::create("heart.png");
-        life->setPosition(newPos);
+        //Calculate location to place symbol
+        Vec2 symbolPosition = Vec2(sin(angle) * _symbolRadius, cos(angle) * _symbolRadius);
 
-        _wheelSprite->addChild(life, 5);
+        //Offset symbol by the center of the wheel
+        symbolPosition += wheelCenter;
+
+        Sprite* symbol = Sprite::create("heart.png");
+        symbol->setPosition(symbolPosition);
+        symbol->setRotation((i + 0.5) * 45);
+        
+        _wheelSprite->addChild(symbol, 5);
     }
-
-    /*auto life = Sprite::create("heart.png");
-    life->setPosition(symbolPosition);
-
-    _wheelSprite->addChild(life, 5);*/
 }
 
 void BonusWheel::setupWheelSpinButton()
