@@ -7,26 +7,23 @@
 #include "ui/CocosGUI.h"
 #include "Wheel.h"
 
-class BonusWheel : public cocos2d::Scene
+class BonusWheelScene : public cocos2d::Scene
 {
     cocos2d::Size _visibleSize;
     cocos2d::Vec2 _origin;
 
-    cocos2d::Sprite* _wheelSprite;
-    const float _symbolRadius = 215.0f;
-
     ui::Button* _button;
-    std::unique_ptr<Wheel> _wheel;
+    std::shared_ptr<Wheel> _wheel;
 
 public:
     static cocos2d::Scene* createScene();
 
     virtual bool init();
 
-    void playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType test);
+    void PlayWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType test);
 
     // implement the "static create()" method manually
-    CREATE_FUNC(BonusWheel);
+    CREATE_FUNC(BonusWheelScene);
 
 private:
 

@@ -5,12 +5,12 @@
 
 USING_NS_CC;
 
-Scene* BonusWheel::createScene()
+Scene* BonusWheelScene::createScene()
 {
-    return BonusWheel::create();
+    return BonusWheelScene::create();
 }
 
-bool BonusWheel::init()
+bool BonusWheelScene::init()
 {
     if (!Scene::init())
     {
@@ -20,16 +20,18 @@ bool BonusWheel::init()
     _visibleSize = Director::getInstance()->getVisibleSize();
     _origin = Director::getInstance()->getVisibleOrigin();
 
-    _wheel = std::make_unique<Wheel>(this);
+    _wheel = std::shared_ptr<Wheel>(new Wheel(this));
 
-    EmulateSpins(1000);
+    //EmulateSpins(1000);
+
+    //TestWheelSector(5);
 
     SetupWheelSpinButton();
 
     return true;
 }
 
-void BonusWheel::SetupWheelSpinButton()
+void BonusWheelScene::SetupWheelSpinButton()
 {
     //Setup Button position
     float buttonX = _origin.x + (_visibleSize.width * 0.5f);
@@ -41,11 +43,11 @@ void BonusWheel::SetupWheelSpinButton()
     _button->setTitleLabel(label);
     _button->setPosition(Vec2(buttonX, buttonY));
     _button->setScale(0.8f);
-    _button->addTouchEventListener(CC_CALLBACK_2(BonusWheel::playWheelSpinButtonCallback, this));
+    _button->addTouchEventListener(CC_CALLBACK_2(BonusWheelScene::PlayWheelSpinButtonCallback, this));
     this->addChild(_button);
 }
 
-void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
+void BonusWheelScene::PlayWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
 {
     if (type != cocos2d::ui::Widget::TouchEventType::ENDED)
         return;
@@ -57,12 +59,12 @@ void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::
     _wheel->SpinWheel();
 }
 
-void BonusWheel::TestWheelSector(int selector)
+void BonusWheelScene::TestWheelSector(int selector)
 {
     _wheel->SpinWheel(selector);
 }
 
-void BonusWheel::EmulateSpins(int spinCount)
+void BonusWheelScene::EmulateSpins(int spinCount)
 {
     auto dropTable = _wheel->GetDropTable();
     auto dropTableItems = dropTable->GetDropTableItems();

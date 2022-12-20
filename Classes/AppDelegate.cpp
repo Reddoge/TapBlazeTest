@@ -23,7 +23,6 @@
  ****************************************************************************/
 
 #include "AppDelegate.h"
-//#include "HelloWorldScene.h"
 #include "BonusWheelScene.h"
 
 // #define USE_AUDIO_ENGINE 1
@@ -109,8 +108,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     register_all_packages();
 
     // create a scene. it's an autorelease object
-    //auto scene = HelloWorld::createScene();
-    auto scene = BonusWheel::createScene();
+    auto scene = BonusWheelScene::createScene();
 
     // run
     director->runWithScene(scene);

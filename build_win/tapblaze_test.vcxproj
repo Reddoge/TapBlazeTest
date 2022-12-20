@@ -117,8 +117,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Debug/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -284,8 +283,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/Release/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -451,8 +449,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/MinSizeRel/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -617,8 +614,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <PostBuildEvent>
-      <Message>
-      </Message>
+      <Message>												</Message>
       <Command>setlocal
 "D:\Program Files\CMake\bin\cmake.exe" -E copy_if_different D:/CodingTests/tapblaze_test/cocos2d/external/openssl/prebuilt/win32/libssl-1_1.dll D:/CodingTests/tapblaze_test/build_win/bin/tapblaze_test/RelWithDebInfo/libssl-1_1.dll
 if %errorlevel% neq 0 goto :cmEnd
@@ -809,17 +805,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Classes\Wheel.h" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.h" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.h" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\DropTable.h" />
-    <ClCompile Include="..\Classes\Wheel.cpp" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\DropTableItem.cpp" />
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\Wheel.h" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\main.h" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\resource.h" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.cpp" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\BonusWheelScene.cpp" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\DropTable.cpp" />
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\Wheel.cpp" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\proj.win32\main.cpp" />
     <ResourceCompile Include="D:\CodingTests\tapblaze_test\proj.win32\game.rc" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\CloseNormal.png" />
@@ -837,7 +833,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\fonts\Marker Felt.ttf" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\fonts\arial.ttf" />
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\res\.gitkeep" />
-    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\test.txt" />
     <ClCompile Include="D:\CodingTests\tapblaze_test\cocos2d\cocos\precheader.cpp" />
   </ItemGroup>
   <ItemGroup>

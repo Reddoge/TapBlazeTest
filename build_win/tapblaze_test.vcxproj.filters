@@ -13,14 +13,14 @@
     <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\DropTable.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="D:\CodingTests\tapblaze_test\Classes\Wheel.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
     <ClCompile Include="D:\CodingTests\tapblaze_test\proj.win32\main.cpp">
       <Filter>Source Files\proj.win32</Filter>
     </ClCompile>
     <ClCompile Include="D:\CodingTests\tapblaze_test\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\Wheel.cpp">
-      <Filter>Source Files\Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +31,9 @@
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\DropTable.h">
+      <Filter>Source Files\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\Wheel.h">
       <Filter>Source Files\Classes</Filter>
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\proj.win32\main.h">
@@ -83,12 +86,6 @@
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\test.txt">
-      <Filter>Resources</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\Wheel.h">
-      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

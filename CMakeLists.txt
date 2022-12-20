@@ -60,12 +60,14 @@ list(APPEND GAME_SOURCE
      Classes/BonusWheelScene.cpp
      Classes/DropTable.cpp
      Classes/DropTableItem.cpp
+     Classes/Wheel.cpp
      )
 list(APPEND GAME_HEADER
      Classes/AppDelegate.h
      Classes/BonusWheelScene.h
      Classes/DropTable.h
      Classes/DropTableItem.cpp
+     Classes/Wheel.h
      )
 
 if(ANDROID)
