@@ -11,9 +11,9 @@ public:
 
 	DropTable();
 
-	void OverrideTable();
-
 	std::vector<DropTableItem*> GetDropTableItems() const;
+
+	DropTableItem* GetItem(int sector) const;
 
 	DropTableItem* RollTable();
 

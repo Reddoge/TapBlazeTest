@@ -1,5 +1,7 @@
 #include "BonusWheelScene.h"
+#include "DropTable.h"
 #include <cmath>
+#include <functional>
 
 USING_NS_CC;
 
@@ -18,88 +20,29 @@ bool BonusWheel::init()
     _visibleSize = Director::getInstance()->getVisibleSize();
     _origin = Director::getInstance()->getVisibleOrigin();
 
-    setupWheel();
-    populateWheel();
-    setupWheelSpinButton();
+    _wheel = std::make_unique<Wheel>(this);
+
+    EmulateSpins(1000);
+
+    SetupWheelSpinButton();
 
     return true;
 }
 
-void BonusWheel::setupWheel()
-{
-    //Setup Wheel position
-    float wheelX = _origin.x + (_visibleSize.width / 2);
-    float wheelY = _origin.y + (_visibleSize.height / 2) + 60.0f;
-
-    _wheelSprite = Sprite::create("wheel_sections_8.png");
-    _wheelSprite->setPosition(Vec2(wheelX, wheelY));
-
-    auto wheelBorderSprite = Sprite::create("wheel_border.png");
-    wheelBorderSprite->setPosition(Vec2(wheelX, wheelY));
-
-    //Note that the X position of the arrow is referring to wheelX
-    float arrowY = wheelY + (wheelBorderSprite->getContentSize().height / 2) - 30.0f;
-
-    auto greenArrow = Sprite::create("wheel_arrow.png");
-    greenArrow->setPosition(Vec2(wheelX, arrowY));
-
-    //Didn't parent wheel border due to a wobble that would occur, its not sitting correctly on the sprite
-    this->addChild(_wheelSprite, 0);
-    this->addChild(wheelBorderSprite, 1);
-    this->addChild(greenArrow, 2);
-}
-
-void BonusWheel::populateWheel()
-{
-    Vec2 wheelCenter = Vec2(_wheelSprite->getContentSize().width * 0.5f, _wheelSprite->getContentSize().height * 0.5f);
-
-    std::vector<DropTableItem*> dropTableItems = _dropTable.GetDropTableItems();
-    int wheelSectorCount = dropTableItems.size();
-
-    //Divide total distance around the outside of the circle by the amount of sectors we need
-    float anglePerSector = (M_PI * 2.0f) / wheelSectorCount;
-
-    for (size_t i = 0; i < wheelSectorCount; i++)
-    {
-        DropTableItem* dropTableItem = dropTableItems[i];
-
-        //Offset rotation of placing the symbols on the wheel
-        float angle = (i + 0.5) * anglePerSector;
-
-        //Calculate location to place symbol
-        Vec2 symbolPosition = Vec2(sin(angle) * _symbolRadius, cos(angle) * _symbolRadius);
-
-        //Offset symbol by the center of the wheel
-        symbolPosition += wheelCenter;
-
-        auto symbol = Sprite::create(dropTableItem->GetFileName());
-        symbol->setPosition(symbolPosition);
-        symbol->setRotation((i + 0.5) * (360 / wheelSectorCount));
-
-        auto symbolLabel = Label::createWithTTF(dropTableItem->GetDisplayText(), "fonts/Marker Felt.ttf", 20);
-        symbolLabel->enableOutline(Color4B(188, 74, 60, 255), 2);
-        symbolLabel->setAnchorPoint(Vec2(0.0f, 0.0f));
-        symbolLabel->setPosition(Vec2(0.0f, -10.0f));
-        
-        _wheelSprite->addChild(symbol, 5);
-        symbol->addChild(symbolLabel, 6);
-    }
-}
-
-void BonusWheel::setupWheelSpinButton()
+void BonusWheel::SetupWheelSpinButton()
 {
     //Setup Button position
-    float buttonX = _origin.x + (_visibleSize.width / 2);
+    float buttonX = _origin.x + (_visibleSize.width * 0.5f);
     float buttonY = _origin.y + (_visibleSize.height / 8);
 
     auto label = Label::createWithTTF("PlayOn", "fonts/Marker Felt.ttf", 68);
 
-    auto button = ui::Button::create("spin_button.png", "", "");
-    button->setTitleLabel(label);
-    button->setPosition(Vec2(buttonX, buttonY));
-    button->setScale(0.8f);
-    button->addTouchEventListener(CC_CALLBACK_2(BonusWheel::playWheelSpinButtonCallback, this));
-    this->addChild(button);
+    _button = ui::Button::create("spin_button.png", "", "");
+    _button->setTitleLabel(label);
+    _button->setPosition(Vec2(buttonX, buttonY));
+    _button->setScale(0.8f);
+    _button->addTouchEventListener(CC_CALLBACK_2(BonusWheel::playWheelSpinButtonCallback, this));
+    this->addChild(_button);
 }
 
 void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type)
@@ -107,37 +50,45 @@ void BonusWheel::playWheelSpinButtonCallback(cocos2d::Ref* sender, cocos2d::ui::
     if (type != cocos2d::ui::Widget::TouchEventType::ENDED)
         return;
 
-    DropTableItem* winningItem = _dropTable.RollTable();
+    _button->setEnabled(false);
+    _button->setTouchEnabled(false);
+    _button->runAction(EaseIn::create(ScaleTo::create(0.5f, 0), 1));
 
-    if (!winningItem)
+    _wheel->SpinWheel();
+}
+
+void BonusWheel::TestWheelSector(int selector)
+{
+    _wheel->SpinWheel(selector);
+}
+
+void BonusWheel::EmulateSpins(int spinCount)
+{
+    auto dropTable = _wheel->GetDropTable();
+    auto dropTableItems = dropTable->GetDropTableItems();
+
+    std::map<DropTableItem*, int> dropTableMap;
+
+    for (size_t i = 0; i < dropTableItems.size(); i++)
     {
-        CCLOG("Not going to spin, item was nullptr");
-        return;
+        dropTableMap.insert(std::make_pair(dropTableItems[i], 0));
     }
 
-    int sectorNumber = winningItem->GetSector();
+    for (size_t i = 0; i < spinCount; i++)
+    {
+        auto dropTableItem = dropTable->RollTable();
+        
+        auto iter = dropTableMap.find(dropTableItem);
+        if (iter != dropTableMap.end())
+        {
+            iter->second += 1;
+        }
+    }
 
-    CCLOG("%d", sectorNumber);
-    CCLOG("%s", &winningItem->GetName());
-    CCLOG("%d", winningItem->GetQuantity());
+    for (auto const& itemPair : dropTableMap)
+    {
+        auto tableItem = itemPair.first;
 
-    //Calculate desired offset
-    int desiredItemAngleOffset = 720 - ((sectorNumber * 45) - 22.5f);
-
-    CCLOG("%d", desiredItemAngleOffset);
-
-    cocos2d::Vector<cocos2d::FiniteTimeAction*> actionVector;
-    actionVector.pushBack(RotateBy::create(0.5f, -5));
-    actionVector.pushBack(EaseOut::create(RotateBy::create(4.0f, 1805), 0.5f));
-    actionVector.pushBack(EaseIn::create(RotateBy::create(2.0f, desiredItemAngleOffset), 0.5f));
-
-    auto callback = CallFuncN::create([&](Node* node) {
-        CCLOG("Callback works 2");
-        });
-
-    actionVector.pushBack(callback);
-    
-    auto sequence = Sequence::create(actionVector);
-
-    _wheelSprite->runAction(sequence);
+        CCLOG("Item: %s Quantity: %d Drop Weight: %d Number of Rolls: %d", tableItem->GetName().c_str(), tableItem->GetQuantity(), tableItem->GetDropChance(), itemPair.second);
+    }
 }

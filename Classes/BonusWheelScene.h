@@ -5,7 +5,7 @@
 
 #include "cocos2d.h"
 #include "ui/CocosGUI.h"
-#include "DropTable.h"
+#include "Wheel.h"
 
 class BonusWheel : public cocos2d::Scene
 {
@@ -15,7 +15,8 @@ class BonusWheel : public cocos2d::Scene
     cocos2d::Sprite* _wheelSprite;
     const float _symbolRadius = 215.0f;
 
-    DropTable _dropTable;
+    ui::Button* _button;
+    std::unique_ptr<Wheel> _wheel;
 
 public:
     static cocos2d::Scene* createScene();
@@ -29,11 +30,11 @@ public:
 
 private:
 
-    void setupWheel();
+    void SetupWheelSpinButton();
 
-    void populateWheel();
+    void TestWheelSector(int sectorNumber);
 
-    void setupWheelSpinButton();
+    void EmulateSpins(int spinCount);
 };
 
 #endif // __BONUSWHEEL_SCENE_H__

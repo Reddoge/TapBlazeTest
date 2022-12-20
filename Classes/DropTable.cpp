@@ -16,14 +16,22 @@ DropTable::DropTable()
 	dropTable.push_back(new DropTableItem(8, "Hammer", 1, 20, "hammer.png"));
 }
 
-void DropTable::OverrideTable()
-{
-
-}
-
 std::vector<DropTableItem*> DropTable::GetDropTableItems() const
 {
 	return dropTable;
+}
+
+DropTableItem* DropTable::GetItem(int sector) const
+{
+	for (size_t i = 0; i < dropTable.size(); i++)
+	{
+		if(dropTable[i]->GetSector() == sector)
+		{
+			return dropTable[i];
+		}
+	}
+
+	return nullptr;
 }
 
 DropTableItem* DropTable::RollTable()

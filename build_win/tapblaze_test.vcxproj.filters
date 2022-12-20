@@ -19,6 +19,9 @@
     <ClCompile Include="D:\CodingTests\tapblaze_test\cocos2d\cocos\precheader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Wheel.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Classes\AppDelegate.h">
@@ -83,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="D:\CodingTests\tapblaze_test\Resources\test.txt">
       <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Wheel.h">
+      <Filter>Source Files\Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
