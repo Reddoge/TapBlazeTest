@@ -83,6 +83,7 @@ void Wheel::SpinWheel(int desiredSector)
 {
     int sectorNumber = desiredSector;
 
+    //if sectorNumber is not overridden then roll table as normal
     if (sectorNumber <= 0)
     {
         _winningItem = _dropTable->RollTable();

@@ -37,6 +37,5 @@ public:
 
 	std::string GetDisplayText() { return _displayText; }
 
-
 	~DropTableItem();
 };
